@@ -3,5 +3,6 @@
         "html",
         "javascript",
         "javascriptreact",
-    ]
+    ],
+    "python.pythonPath": "api/.venv/bin/python3"
 }
