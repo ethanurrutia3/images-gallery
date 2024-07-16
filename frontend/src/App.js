@@ -23,7 +23,12 @@ function App() {
       `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`
     )
       .then((res) => res.json())
+      
       .then((data) => {
+        if(data.errors){
+          console.log("Error: ", data.errors);
+          return;
+        }
         setImages([{...data, title: word},...images,]) //add new imaage to the beginning of the array and adding a title attribute to the end of the json data for our new entry
         
       })
